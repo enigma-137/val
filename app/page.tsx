@@ -1,5 +1,5 @@
-"use client"
-import React, { useState, useEffect} from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
 import { DialogTitle } from "@radix-ui/react-dialog";
@@ -10,12 +10,11 @@ const App: React.FC = () => {
   const [yesSize, setYesSize] = useState(1);
   const [noSize, setNoSize] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false); 
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true); 
+    setIsClient(true);
   }, []);
-
 
   const handleNoClick = () => {
     setYesSize(yesSize + 2);
@@ -24,8 +23,8 @@ const App: React.FC = () => {
 
   const handleYesClick = () => {
     setIsModalOpen(true);
-    setYesSize(1)
-    setNoSize(1)
+    setYesSize(1);
+    setNoSize(1);
   };
 
   return (
@@ -35,7 +34,7 @@ const App: React.FC = () => {
         {[...Array(20)].map((_, i) => (
           <Heart
             key={i}
-            className="absolute w-8 h-8 text-red-500  animate-float"
+            className="absolute w-8 h-8 text-red-500 animate-float"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -47,7 +46,7 @@ const App: React.FC = () => {
 
       {/* Main content */}
       <h1 className="text-4xl font-bold text-red-600 mb-8 z-10">
-        Will you be my val? {isClient}
+        Will you be my val?
       </h1>
 
       <div className="flex gap-4 z-10">
@@ -71,8 +70,8 @@ const App: React.FC = () => {
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogTitle></DialogTitle>
         <DialogContent className="sm:max-w-md">
-          <DialogHeader className="text-2xl font-bold text-center">
-            Thank you for accepting!  <span className="text-sm">follow me <Link href="https://x.com/nigmaQX" target="_blank"> <b>on Twitter(X) </b> </Link> </span>
+          <DialogHeader className="text-xl font-bold text-center">
+            Mmuuuaahh!😍 Thank you for accepting!
           </DialogHeader>
           <img
             src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzZjODQyMzVmZDNjZDM5NTNhZDI2NTg2ZDM1ZTM5ZjM5YTM1YTM3YSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xT1XGPy39lDKJ5Gc5W/giphy.gif"
@@ -81,6 +80,18 @@ const App: React.FC = () => {
           />
         </DialogContent>
       </Dialog>
+
+    
+      <div className="absolute bottom-4 text-sm text-gray-700">
+        Follow me{" "}
+        <Link
+          href="https://x.com/nigmaQX"
+          target="_blank"
+          className="text-blue-600 font-bold"
+        >
+          on Twitter (X)
+        </Link>
+      </div>
     </div>
   );
 };
