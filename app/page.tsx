@@ -26,7 +26,7 @@ const App: React.FC = () => {
     setYesSize(1);
     setNoSize(1);
   };
-
+console.log(isClient)
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-pink-100 relative overflow-hidden">
       {/* Floating love shapes */}
@@ -44,7 +44,7 @@ const App: React.FC = () => {
         ))}
       </div>
 
-      {/* Main content */}
+
       <h1 className="text-4xl font-bold text-red-600 mb-8 z-10">
         Will you be my val?
       </h1>
@@ -71,7 +71,7 @@ const App: React.FC = () => {
         <DialogTitle></DialogTitle>
         <DialogContent className="sm:max-w-md">
           <DialogHeader className="text-xl font-bold text-center">
-            Mmuuuaahh!😍 Thank you for accepting! {isClient}
+            Mmuuuaahh!😍 Thank you for accepting!
           </DialogHeader>
           <img
             src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzZjODQyMzVmZDNjZDM5NTNhZDI2NTg2ZDM1ZTM5ZjM5YTM1YTM3YSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xT1XGPy39lDKJ5Gc5W/giphy.gif"
