@@ -24,6 +24,8 @@ const App: React.FC = () => {
 
   const handleYesClick = () => {
     setIsModalOpen(true);
+    setYesSize(1)
+    setNoSize(1)
   };
 
   return (
