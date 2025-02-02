@@ -18,8 +18,8 @@ const App: React.FC = () => {
 
 
   const handleNoClick = () => {
-    setYesSize(yesSize + 0.2);
-    setNoSize(noSize - 0.1);
+    setYesSize(yesSize + 0.8);
+    setNoSize(noSize - 0.08);
   };
 
   const handleYesClick = () => {
