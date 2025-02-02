@@ -71,7 +71,7 @@ const App: React.FC = () => {
         <DialogTitle></DialogTitle>
         <DialogContent className="sm:max-w-md">
           <DialogHeader className="text-xl font-bold text-center">
-            Mmuuuaahh!😍 Thank you for accepting!
+            Mmuuuaahh!😍 Thank you for accepting! {isClient}
           </DialogHeader>
           <img
             src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzZjODQyMzVmZDNjZDM5NTNhZDI2NTg2ZDM1ZTM5ZjM5YTM1YTM3YSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xT1XGPy39lDKJ5Gc5W/giphy.gif"
