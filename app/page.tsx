@@ -45,7 +45,7 @@ const App: React.FC = () => {
 
       {/* Main content */}
       <h1 className="text-4xl font-bold text-red-600 mb-8 z-10">
-        Will you be my val?
+        Will you be my val? {isClient}
       </h1>
 
       <div className="flex gap-4 z-10">
