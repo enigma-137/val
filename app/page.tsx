@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Heart, Stars } from "lucide-react"
+import { Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from 'next/image'
 
 export default function ValentinePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -95,7 +96,7 @@ export default function ValentinePage() {
               transition={{ duration: 0.5 }}
               className="glass-card p-8 rounded-3xl text-center space-y-6 relative overflow-hidden"
             >
-           
+
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-400 to-red-500" />
 
               <div className="relative">
@@ -113,7 +114,7 @@ export default function ValentinePage() {
                 </h1>
 
                 <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                  {slides[currentSlide].content}
+                  <TypewriterEffect text={slides[currentSlide].content} />
                 </p>
               </div>
 
@@ -162,7 +163,7 @@ export default function ValentinePage() {
                 )}
               </div>
 
-         
+
               <div className="flex justify-center gap-2 mt-6">
                 {slides.map((_, index) => (
                   <div
@@ -181,7 +182,7 @@ export default function ValentinePage() {
             >
               <h1 className="text-4xl font-bold text-pink-600 mb-4">Yay!!! 🎉</h1>
               <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-6 shadow-inner">
-                <img
+                <Image
                   src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzZjODQyMzVmZDNjZDM5NTNhZDI2NTg2ZDM1ZTM5ZjM5YTM1YTM3YSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xT1XGPy39lDKJ5Gc5W/giphy.gif"
                   alt="Celebration"
                   className="w-full h-full object-cover"
@@ -197,6 +198,7 @@ export default function ValentinePage() {
     </div>
   )
 }
+
 
 function FloatingHearts() {
   const [hearts, setHearts] = useState<React.ReactNode[]>([])
@@ -220,5 +222,31 @@ function FloatingHearts() {
   }, [])
 
   return <div className="fixed inset-0 pointer-events-none -z-0">{hearts}</div>
+}
+
+function TypewriterEffect({ text }: { text: string }) {
+  const [displayLength, setDisplayLength] = useState(0)
+
+  useEffect(() => {
+    setDisplayLength(0)
+    const timer = setInterval(() => {
+      setDisplayLength((prev) => {
+        if (prev < text.length) {
+          return prev + 1
+        }
+        clearInterval(timer)
+        return prev
+      })
+    }, 50)
+
+    return () => clearInterval(timer)
+  }, [text])
+
+  return (
+    <span className="inline-block">
+      {text.slice(0, displayLength)}
+      <span className="animate-pulse">|</span>
+    </span>
+  )
 }
 
