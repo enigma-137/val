@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 100% 98%;
+    --foreground: 340 20% 10%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 340 20% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 20% 10%;
+    
+    --primary: 340 82% 52%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 340 30% 90%;
+    --secondary-foreground: 340 82% 52%;
+    
+    --muted: 340 10% 95%;
+    --muted-foreground: 340 10% 40%;
+    
+    --accent: 340 30% 90%;
+    --accent-foreground: 340 82% 52%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 340 20% 90%;
+    --input: 340 20% 90%;
+    --ring: 340 82% 52%;
+    
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 50% 50%, #ffeef2 0%, #fff0f5 100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ff4d88, #ff8da1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
