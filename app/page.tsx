@@ -95,7 +95,7 @@ export default function ValentinePage() {
               transition={{ duration: 0.5 }}
               className="glass-card p-8 rounded-3xl text-center space-y-6 relative overflow-hidden"
             >
-              {/* Decorative background elements inside card */}
+           
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-400 to-red-500" />
 
               <div className="relative">
@@ -117,7 +117,7 @@ export default function ValentinePage() {
                 </p>
               </div>
 
-              {/* Navigation / Interaction Buttons */}
+
               <div className="pt-4">
                 {currentSlide < slides.length - 1 ? (
                   <Button
@@ -162,7 +162,7 @@ export default function ValentinePage() {
                 )}
               </div>
 
-              {/* Progress dots */}
+         
               <div className="flex justify-center gap-2 mt-6">
                 {slides.map((_, index) => (
                   <div
