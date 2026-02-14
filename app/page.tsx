@@ -180,10 +180,10 @@ export default function ValentinePage() {
               animate={{ opacity: 1, scale: 1 }}
               className="glass-card p-8 rounded-3xl text-center max-w-lg"
             >
-              <h1 className="text-4xl font-bold text-pink-600 mb-4">Yay!!! 🎉</h1>
+              <h1 className="text-4xl font-bold text-pink-600 mb-4">Yay Thank You!!! 🎉</h1>
               <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-6 shadow-inner">
                 <Image
-                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzZjODQyMzVmZDNjZDM5NTNhZDI2NTg2ZDM1ZTM5ZjM5YTM1YTM3YSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xT1XGPy39lDKJ5Gc5W/giphy.gif"
+                  src="/hugging.gif"
                   alt="Celebration"
                   className="w-full h-full object-cover"
                   width={400}
